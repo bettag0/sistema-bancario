@@ -1,0 +1,93 @@
+
+### CADASTRAR PESSOA
+POST http://localhost:8080/cadastrar-pessoa
+Content-Type: application/json
+
+{
+ "nome": "Gabriel Bettanin",
+ "cpf": "869.929.610-04",
+ "dataNascimento": "1996-10-10"
+}
+
+
+
+
+### CRIAR CONTA
+POST http://localhost:8080/criar-conta
+Content-Type: application/json
+
+{
+  "pessoa":{
+    "idPessoa": 1
+  },
+  "saldo": 800,
+  "limiteSaqueDiario": 300,
+  "tipoConta": 2
+}
+
+
+### LISTAR TODAS AS PESSOAS
+GET http://localhost:8080/pessoas
+Content-Type: application/json
+
+### LISTAR TODAS AS CONTAS
+GET http://localhost:8080/contas
+Content-Type: application/json
+
+### EXTRATO
+POST http://localhost:8080/extrato
+Content-Type: application/json
+
+{
+  "idConta": 2
+}
+
+### SALDO
+POST http://localhost:8080/saldo
+Content-Type: application/json
+
+{
+  "idConta": 2
+}
+
+### SAQUE
+POST http://localhost:8080/saque
+Content-Type: application/json
+
+{
+    "conta":{
+        "idConta": 2
+    },
+    "valor": 200
+}
+
+### DEPOSITO
+POST http://localhost:8080/deposito
+Content-Type: application/json
+
+{
+  "conta":{
+    "idConta": 2
+  },
+  "valor": 200
+}
+
+### PERIODO EXTRATO
+POST http://localhost:8080/periodo-extrato
+Content-Type: application/json
+
+{
+  "idConta": 2,
+  "dataInicial":"2022-03-25",
+  "dataFinal":"2022-03-27"
+}
+
+### BLOQUEIO
+POST http://localhost:8080/bloqueio
+Content-Type: application/json
+
+
+{
+  "idConta": 2
+}
+
