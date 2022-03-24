@@ -59,7 +59,7 @@ Request:
     "valor": 200
 }
 
-/deposito (POST)
+## /deposito (POST)
 Endpoint para realizar o depósito em uma conta, nele você passa uma transação como corpo da requisição. Não é necessário passar todas as informações da conta, apenas o ID é suficiente. Não passando a data da transação, a transação será feita na hora local.
 
 Request:
